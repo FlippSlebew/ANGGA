@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dari Angga Untuk Tira ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 60px 20px;
+      color: white;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 50px 20px;
+      background: white;
+      border-radius: 20px;
+      margin: 30px auto;
+      max-width: 800px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #e63950;
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #e63950;
+      font-weight: bold;
+    }
+    .game {
+      margin-top: 20px;
+    }
+    .choice {
+      padding: 12px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #ffd6e0;
+      cursor: pointer;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+    .choice:hover {
+      background: #ffb6c1;
+    }
+    footer {
+      padding: 30px;
+      color: white;
+      background: #ff4d6d;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌹 Dari Angga Untuk Tira 🌹</h1>
+    <p>Aku punya sesuatu spesial buatmu... tapi kamu harus menemukannya 😉</p>
+  </header>
+
+  <section>
+    <h2>Level 1: Tebakan Manis 💕</h2>
+    <p>Aku punya 3 kata untukmu... coba tebak yang benar:</p>
+    <div class="game">
+      <button class="choice" onclick="wrongChoice(this)">Aku</button>
+      <button class="choice" onclick="wrongChoice(this)">Suka</button>
+      <button class="choice" onclick="rightChoice()">Kamu ❤️</button>
+    </div>
+    <div id="result1" class="hidden-message"></div>
+  </section>
+
+  <section id="level2" style="display:none;">
+    <h2>Level 2: Pilih Hati yang Benar 💖</h2>
+    <p>Mana hati yang Angga sembunyikan untuk Tira?</p>
+    <div class="game">
+      <button class="choice" onclick="wrongHeart(this)">💙</button>
+      <button class="choice" onclick="wrongHeart(this)">💛</button>
+      <button class="choice" onclick="rightHeart()">❤️</button>
+    </div>
+    <div id="result2" class="hidden-message"></div>
+  </section>
+
+  <section id="final" style="display:none;">
+    <h2>🎉 SURPRISE 🎉</h2>
+    <p class="hidden-message" style="display:block;">
+      Tira sayangku 💕<br><br>
+      Website ini aku bikin khusus untukmu...  
+      Aku cuma mau bilang: <br><br>
+      <b>AKU SAYANG BANGET SAMA KAMU ❤️</b><br>
+      Terima kasih sudah selalu ada buat Angga 🥰
+    </p>
+  </section>
+
+  <footer>
+    <p>Dibuat dengan penuh cinta oleh Angga untuk Tira 💌</p>
+  </footer>
+
+  <script>
+    function wrongChoice(btn) {
+      document.getElementById("result1").style.display = "block";
+      document.getElementById("result1").innerHTML = "Hehe salah 😆 coba lagi!";
+    }
+    function rightChoice() {
+      document.getElementById("result1").style.display = "block";
+      document.getElementById("result1").innerHTML = "Betul! Kata yang benar adalah 'Kamu ❤️'";
+      document.getElementById("level2").style.display = "block";
+      window.scrollTo({ top: document.getElementById("level2").offsetTop, behavior: 'smooth' });
+    }
+
+    function wrongHeart(btn) {
+      document.getElementById("result2").style.display = "block";
+      document.getElementById("result2").innerHTML = "Ups, bukan hati ini 😅";
+    }
+    function rightHeart() {
+      document.getElementById("result2").style.display = "block";
+      document.getElementById("result2").innerHTML = "Yay! Kamu nemu hati Angga buatmu ❤️";
+      document.getElementById("final").style.display = "block";
+      window.scrollTo({ top: document.getElementById("final").offsetTop, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
